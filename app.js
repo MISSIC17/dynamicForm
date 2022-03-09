@@ -1,18 +1,16 @@
 const form = document.myform; // Myform and form represent the same form
 
-// Prevent form from reloading on submit and other default befhaviours
+// Prevent form from reloading on submit and other default behaviours
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 });
 
 let formElems = []; // Will hold the elements like id,name, class,etc. of the form
 for (let elem of form.elements) {
+    if (elem.name === 'submit') continue;
     formElems.push(elem.name);
 }
 formElems = [...new Set(formElems)]; // Removes the repeated elements
-formElems.pop(); // Removes the last element of the form from the list,
-// Because it is the submit button, and we don't need to care about it's
-// Values unless clicked which can be made another event
 console.log(formElems);
 
 function submitForm() {
@@ -26,7 +24,7 @@ function submitForm() {
         let inputType = currentElement.getAttribute('type');
         let currentWarning = document.querySelector(`#${elem}-warning`);
         if (inputType == 'radio') {
-            // Radio button's avlues behave different than other default fields
+            // Radio button's values behave different than other default fields
             let radios = document.getElementsByName(`${elem}`);
             let atLeastOne = true;
             for (let i = 0; i < radios.length; i++) {
