@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="popups.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="error-top-wrapper">
+      <div class="close-btn">
+        <span class="fas fa-close"></span>
+      </div>
+
+      <div class="error-text">Please fill out all the fields!</div>
+    </div>
+    <main>
+      <header>
+        <strong>Trinity International College</strong>
+        <p>Student's Login Page</p>
+      </header>
+      <form name="myform" autocomplete="off">
+        <section class="fname-wrapper">
+          <div class="intro" id="fname-intro">
+            <h3>Full name</h3>
+          </div>
+
+          <div class="input-wrapper">
+            <input type="text" name="fname" />
+            <span id="fname-warning" class="warning hidden"
+              ><i class="fas fa-warning"></i
+            ></span>
+          </div>
+          <div class="messages" id="fname-messages"></div>
+        </section>
+        <section class="id-wrapper">
+          <div class="intro" id="id-intro"><h3>Student ID</h3></div>
+
+          <div class="input-wrapper">
+            <input type="number" name="id" />
+            <span id="id-warning" class="warning hidden"
+              ><i class="fas fa-warning"></i
+            ></span>
+          </div>
+          <div class="messages" id="id-messages"></div>
+        </section>
+        <section class="class-wrapper">
+          <div class="intro" id="class-intro"><h3>Class</h3></div>
+
+          <div class="input-wrapper">
+            <label
+              ><span>11</span><input type="radio" name="class" value="11"
+            /></label>
+            <label
+              ><span>12</span><input type="radio" name="class" value="12"
+            /></label>
+            <span id="class-warning" class="warning radio hidden"
+              ><i class="fas fa-warning"></i
+            ></span>
+          </div>
+          <div class="messages" id="class-messages"></div>
+        </section>
+        <section class="shift-wrapper">
+          <div class="intro" id="shift-intro"><h3>Shift</h3></div>
+
+          <div class="input-wrapper">
+            <label
+              ><span>Day</span><input type="radio" name="shift" value="Day"
+            /></label>
+            <label
+              ><span>Morning</span
+              ><input type="radio" name="shift" value="Morning"
+            /></label>
+            <span id="shift-warning" class="warning radio hidden"
+              ><i class="fas fa-warning"></i
+            ></span>
+          </div>
+          <div class="messages" id="shift-messages"></div>
+        </section>
+        <section class="section-wrapper">
+          <div class="intro" id="section-intro"><h3>Section</h3></div>
+
+          <div class="input-wrapper">
+            <input type="text" name="section" />
+            <span id="section-warning" class="warning hidden"
+              ><i class="fas fa-warning"></i
+            ></span>
+          </div>
+          <div class="messages" id="section-messages"></div>
+        </section>
+        <section class="email-wrapper">
+          <div class="intro" id="email-intro"><h3>Email</h3></div>
+
+          <div class="input-wrapper">
+            <input type="email" name="email" />
+            <span id="email-warning" class="warning hidden"
+              ><i class="fas fa-warning"></i
+            ></span>
+          </div>
+          <div class="messages" id="email-messages"></div>
+        </section>
+
+        <section class="password-wrapper">
+          <div class="intro" id="password-intro"><h3>Password</h3></div>
+
+          <div class="input-wrapper">
+            <input type="password" name="password" />
+            <span id="password-warning" class="warning hidden"
+              ><i class="fas fa-warning"></i
+            ></span>
+          </div>
+          <div id="password-messages" class="messages"></div>
+        </section>
+        <input
+          type="submit"
+          id="submit"
+          name="submit"
+          onclick="submitForm()"
+          value="Submit"
+        />
+      </form>
+    </main>
+    <div id="sucess-wrapper">
+      <div class="box">
+        <h1>Success!</h1></div>
+
+    </div>
+  </body>
+
+  <script src="app.js"></script>
+</html>
