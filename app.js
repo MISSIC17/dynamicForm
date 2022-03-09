@@ -6,7 +6,7 @@ form.addEventListener('submit', (e) => {
 });
 
 let formElems = []; // Will hold the elements like id,name, class,etc. of the form
-for (let elem of myform.elements) {
+for (let elem of form.elements) {
     formElems.push(elem.name);
 }
 formElems = [...new Set(formElems)]; // Removes the repeated elements
