@@ -80,7 +80,6 @@ input[type="email"] {
   height: 3rem;
   width: min(30rem, 100%);
   outline: none;
-  border: 1px solid black;
   padding: 0 1rem;
   font-size: 1.3rem;
 }
@@ -112,9 +111,6 @@ input:checked{
   justify-content: space-evenly;
   position: relative;
 }
-/* .class-wrapper .input-wrapper span{
-    padding:0 1em;
-} */
 span {
   font-size: 1.42rem;
   padding: 0.2rem;
@@ -129,7 +125,6 @@ input[type="submit"] {
   width:100%; 
   margin-top:2em;
   align-self: center;
-  /* border-radius: 0.5em; */
   background-color: var(--secondaryColor);
   outline: none;
   font-size: 2rem;
@@ -181,10 +176,6 @@ span.fa{
 .hidden{
   display:none;
 }
-/* input:focus,input:not(input[type='submit']):focus{
-  transition:0.1 all ease;
-  background:linear-gradient(to right,rgba(94, 85, 85,0.1),white);
-} */
 .warning{
   position: absolute;
   right:1.5em;

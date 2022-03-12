@@ -11,14 +11,46 @@ for (let elem of form.elements) {
     formElems.push(elem.name);
 }
 formElems = [...new Set(formElems)]; // Removes the repeated elements
-console.log(formElems);
+formElems.map((elem) => {
+
+    let currentField = document.querySelector(`input[name="${elem}"]`);
+    if (currentField.getAttribute('type') !== "radio") {
+
+        currentField.addEventListener('focus', () => {
+            setInterval(() => {
+                let fieldValue = currentField.value;
+                if (document.activeElement == currentField) {
+
+                    if (fieldValue !== "") {
+                        if (currentField.classList.contains('black') || currentField.classList.contains('red')) {
+                            currentField.classList.remove('black');
+                            currentField.classList.remove('red');
+                            currentField.classList.add('green');
+                        }
+                    } else {
+                        if (currentField.classList.contains('green') || currentField.classList.contains('black')) {
+
+                            currentField.classList.remove('black');
+                            currentField.classList.remove('green');
+                            currentField.classList.add('red');
+                        }
+                    }
+
+                }
+
+            }, 500);
+        });
+    }
+
+})
+
+
 
 function submitForm() {
     let isComplete = true;
     let incompleted = [];
     formElems.map((elem) => {
         // Elem is id,fname and such things
-        console.log(elem);
         let currElemValue;
         let currentElement = document.querySelector(`input[name='${elem}']`);
         let inputType = currentElement.getAttribute('type');
@@ -67,7 +99,6 @@ function submitForm() {
             }
         }
     });
-    console.log(document.querySelector(`input[name='${incompleted[0]}']`));
 
     if (incompleted.length != 0) {
         for (let field of incompleted) {
@@ -103,10 +134,10 @@ function errMsg(field, show) {
 function success() {
     console.log('Sucess');
     document.querySelector('#sucess-wrapper').classList.add('visibleSuccess');
-    setInterval(() => {
-        document
-            .querySelector('#sucess-wrapper')
-            .classList.remove('visibleSuccess');
+    document.querySelector('main').style.visibility = "hidden";
+    setTimeout(() => {
+        document.querySelector('#sucess-wrapper').classList.remove('visibleSuccess');
+        document.querySelector('main').style.visibility = "visible";
     }, 4000);
 }
 function showTopErr() {
