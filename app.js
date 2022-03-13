@@ -134,10 +134,11 @@ function errMsg(field, show) {
 function success() {
     console.log('Sucess');
     document.querySelector('#sucess-wrapper').classList.add('visibleSuccess');
-    document.querySelector('main').style.visibility = "hidden";
+    document.querySelector('form').style.filter = "blur(10px)";
+    window.scrollTo(0, 0);
     setTimeout(() => {
         document.querySelector('#sucess-wrapper').classList.remove('visibleSuccess');
-        document.querySelector('main').style.visibility = "visible";
+        document.querySelector('form').style.filter = "blur(0px)";
     }, 4000);
 }
 function showTopErr() {

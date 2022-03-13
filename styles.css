@@ -13,9 +13,10 @@
 
 body {
   
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
   place-items: center;
+  /* overflow:hidden; */
 }
 main {
   position: relative;
@@ -67,6 +68,7 @@ form {
   justify-content: space-evenly;
   padding: 1.5em;
   border-radius: 0.6rem;
+  margin: 0 0 10rem 0;
 }
 .field-intro h3,
 #intro {

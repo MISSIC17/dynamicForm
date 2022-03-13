@@ -8,15 +8,17 @@
   display: grid;
   transform:scale(0);
   place-items: center;
-  height:100%;
-  width:100vw;
+  width:clamp(40vw,70%,60vw);
+  max-height: 50vh;
   z-index: 2;
+  aspect-ratio:1;
+
   background-color: rgba(0, 0, 0, 0.774);
 }
 #sucess-wrapper .box{
   position: relative;
   border-radius: 0.6rem;
-  width:min(25em,70%);
+  width:min(20em,70%);
   aspect-ratio: 3/1;
   color:var(--secondaryColor);
   background-color: var(--primaryColor);
