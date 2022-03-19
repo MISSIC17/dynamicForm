@@ -5,6 +5,14 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 });
 
+// class Form{
+//     constructor(){
+//     this.hehe = "boi";
+//     }
+//     text(length) {
+        
+//     }
+// }
 let formElems = []; // Will hold the elements like id,name, class,etc. of the form
 for (let elem of form.elements) {
     if (elem.name === 'submit') continue;
@@ -22,6 +30,7 @@ formElems.map((elem) => {
                 if (document.activeElement == currentField) {
 
                     if (fieldValue !== "") {
+                        
                         if (currentField.classList.contains('black') || currentField.classList.contains('red')) {
                             currentField.classList.remove('black');
                             currentField.classList.remove('red');

@@ -49,7 +49,7 @@
           <div class="intro" id="id-intro"><h3>Student ID</h3></div>
 
           <div class="input-wrapper">
-            <input type="number" name="id" class="black"/>
+            <input type="number" name="id" class="black" />
             <span id="id-warning" class="warning hidden"
               ><i class="fas fa-warning"></i
             ></span>
@@ -93,7 +93,7 @@
           <div class="intro" id="section-intro"><h3>Section</h3></div>
 
           <div class="input-wrapper">
-            <input type="text" name="section" class="black"/>
+            <input type="text" name="section" class="black" />
             <span id="section-warning" class="warning hidden"
               ><i class="fas fa-warning"></i
             ></span>
@@ -116,10 +116,13 @@
           <div class="intro" id="password-intro"><h3>Password</h3></div>
 
           <div class="input-wrapper">
-            <input type="password" name="password" class="black"/>
-            <span id="password-warning" class="warning hidden"
-              ><i class="fas fa-warning"></i
-            ></span>
+            <input type="password" name="password" class="black" />
+            <span id="password-warning" class="warning hidden">
+              <i class="fas fa-warning"></i>
+            </span>
+            <span class="password-visibility">
+              <i class="fas fa-eye-slash"></i>
+            </span>
           </div>
           <div id="password-messages" class="messages"></div>
         </section>
@@ -140,4 +143,5 @@
   </body>
 
   <script src="app.js"></script>
+  <script src="functionalities.js"></script>
 </html>
